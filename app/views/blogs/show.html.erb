@@ -1,0 +1,7 @@
+<h3>All blogs</h3>
+<% @blogs.each do |blog| %>
+  <div><%= blog.title%></div>
+  <div><%= blog.body %></div></br>
+<% end %>
+
+<%= link_to "Add new blog", new_blogs_path %>
