@@ -1,0 +1,8 @@
+<h1>Category name</h1>
+
+<%= @category.name %>
+<% @category.blogs.each do |blog| %>
+  <div>
+    <%= link_to blog.title, blogs_path %>
+  </div>
+<% end %>
