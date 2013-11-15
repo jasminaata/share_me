@@ -1,7 +1,7 @@
-<h1>Hello World</h1>
 <% @categories.each do |category| %>
   <div>
     <%= category.id %><br/>
     <%= link_to category.name, categories_path(id: category.id) %>
   </div>
 <% end %>
+

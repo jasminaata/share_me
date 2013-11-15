@@ -1,4 +1,4 @@
-class BlogsController < ActionController::Base
+class BlogsController < ApplicationController
 
   def show 
     @blogs = Blog.all
