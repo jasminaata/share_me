@@ -2,3 +2,36 @@ body {
   background: url('../images/trevi.png');
   background-size: cover;
 }
+
+h1, h3 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+.main {
+  background-color: #A65600;
+  border: 1px solid #1240AB;
+  border-radius: 5px;
+
+  a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .category {
+    border-right: 1px solid white;
+
+    &:hover {
+      background-color: #4671D5;
+    }
+  }
+}
+
+.container {
+  background-color: white;
+  border: 1px solid black;
+  width: 50%;
+}

@@ -1,8 +1,21 @@
-<h1>Category name</h1>
-
-<%= @category.name %>
-<% @category.blogs.each do |blog| %>
-  <div>
-    <%= link_to blog.title, blogs_path %>
+<div class="container">
+  <div class="line">
+    <div class="inner">
+      <h1><%= @category.name %></h1>
+    </div>
   </div>
-<% end %>
+  <div class="line">
+    <div class="inner">
+      <% @category.blogs.each do |blog| %>
+      <div>
+        <h3>
+          <%= link_to blog.title, blogs_path %>
+        </h3>
+        <p>
+          <%= truncate blog.body, length: 160 %>
+        </p>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
