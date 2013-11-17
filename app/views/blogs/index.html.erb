@@ -6,16 +6,12 @@
   </div>
   <div class="line">
     <div class="inner">
-      <% @category.blogs.each do |blog| %>
       <div>
         <h3>
-          <%= link_to blog.title, blog_path(id: blog.id) %>
+          <%= @blog.title %>
         </h3>
-        <p>
-          <%= truncate blog.body, length: 160 %>
-        </p>
+        <p><%= @blog.body %></p>
       </div>
-      <% end %>
     </div>
   </div>
 </div>

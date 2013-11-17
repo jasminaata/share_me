@@ -2,6 +2,7 @@ ShareMe::Application.routes.draw do
 
   root 'categories#index'
   resource :blogs
+  get 'blogs/:id' => 'blogs#index', as: :blog
   resource :categories, only: [:show, :index]
 
   # The priority is based upon order of creation: first created -> highest priority.
