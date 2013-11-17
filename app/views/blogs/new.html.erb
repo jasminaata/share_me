@@ -9,6 +9,10 @@
     <%= f.text_area :body %>
   </div><br/>
   <div>
+    <%= f.label :category %></br>
+    <%= f.select :category_id, Category.all.collect { |cat| [cat.name, cat.id] }, :include_blank => true  %>
+  </div>
+  <div>
     <%= f.submit "Create" %>
   </div>
 <% end %>
