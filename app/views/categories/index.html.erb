@@ -3,10 +3,11 @@
     <% @categories.each do |category| %>
     <div class="unit size1of4">
       <div class="inner category">
-        <%= link_to category.name, categories_path(id: category.id) %>
+        <%= link_to category.name, categories_path(category) %>
       </div>
     </div>
     <% end %>
   </div>
 </div>
+
 

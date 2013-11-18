@@ -49,4 +49,8 @@ a {
   text-align: center;
   vertical-align: middle;
   border: 1px solid #357ebd;
+
+  &.space {
+    margin-right: 5px;
+  }
 }
