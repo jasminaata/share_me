@@ -1,6 +1,10 @@
 .unit { float: left; }
 .line { width: 100%; }
-.inner { padding: 10px; }
 
 .size1of4 { width: 25%; }
 .size1of2 { width: 50%; }
+
+.inner { padding: 10px; }
+.vertical-inner { 
+  padding: 10px 0; 
+}

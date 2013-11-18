@@ -10,6 +10,10 @@ h1, h3 {
   vertical-align: baseline;
 }
 
+a {
+  text-decoration: none;
+}
+
 .main {
   background-color: #A65600;
   border: 1px solid #1240AB;
@@ -17,7 +21,6 @@ h1, h3 {
 
   a {
     color: white;
-    text-decoration: none;
     text-transform: uppercase;
   }
 
@@ -34,4 +37,16 @@ h1, h3 {
   background-color: white;
   border: 1px solid black;
   width: 50%;
+}
+
+.back {
+  width: 75px;
+  height: 25px;
+  border-radius: 5px;
+  color :#fff;
+  background-color: #428bca;
+  font-size: 14px;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #357ebd;
 }
