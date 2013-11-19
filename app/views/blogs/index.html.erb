@@ -1,41 +1,40 @@
-<div class="container">
-  <div class="line">
-    <div class="inner">
-      <h1><%= @category.name %></h1>
-    </div>
-  </div>
-  <div class="line">
-    <div class="inner">
-      <div>
-        <h3>
-          <%= @blog.title %>
-        </h3>
-        <p><%= @blog.body %></p>
+<div class="line">
+  <div class="vertical-inner">
+    <div class="container">
+      <div class="line">
+        <div class="inner">
+          <div>
+            <h3>
+              <%= @blog.title %>
+            </h3>
+            <p><%= @blog.body %></p>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="line">
-    <div class="inner">
-      <div class="size1of5 unit">
-        <div id="fb-root"></div>
-        <div class="fb-share-button" data-href="http://developers.facebook.com/docs/plugins/" data-type="button_count"></div>
-      </div>
-    </div>
-    <div class="inner">
-      <div class="size1of5 unit">
-        <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
-      </div>
-    </div>
-    <div class="inner">
-      <div class="size1of5 unit">
-        <%= render "linked_in_button" %>
+      <div class="line">
+        <div class="inner">
+          <div class="size1of5 unit">
+            <div id="fb-root"></div>
+            <div class="fb-share-button" data-href="http://developers.facebook.com/docs/plugins/" data-type="button_count"></div>
+          </div>
+        </div>
+        <div class="inner">
+          <div class="size1of5 unit">
+            <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+          </div>
+        </div>
+        <div class="inner">
+          <div class="size1of5 unit">
+            <%= render "linked_in_button" %>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
 <div class="line">
   <div class="vertical-inner">
-    <%= render "shared/home_button", name: "Home", path: root_path, klass: "back unit space" %>
-    <%= render "shared/home_button", name: "Back", path: categories_path(@category), klass: "back" %>
+    <%= render "shared/home_button", name: "All Blogs", path: root_path, klass: "back unit space" %>
+    <%= render "shared/home_button", name: "Back", path: categories_path(id: @category.id), klass: "back" %>
   </div>
 </div>

@@ -26,9 +26,13 @@ a {
 
   .category {
     border-right: 1px solid white;
+  }
 
-    &:hover {
-      background-color: #4671D5;
+  .selected {
+    background-color: orange;
+    
+    a {
+      color: black;
     }
   }
 }
@@ -37,6 +41,7 @@ a {
   background-color: white;
   border: 1px solid black;
   width: 50%;
+  border-radius: 5px;
 }
 
 .back {

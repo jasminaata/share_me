@@ -2,7 +2,7 @@
   <div class="size1of2">
     <% Category.all.each do |category| %>
     <div class="unit size1of4">
-      <div class="inner category">
+      <div class="inner category <%= is_selected?(categories_path(id: category.id)) %>">
         <%= link_to category.name, categories_path(id: category.id) %>
       </div>
     </div>
