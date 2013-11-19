@@ -1,26 +1,30 @@
-<div class="container">
-  <div class="line">
-    <div class="inner">
-      <h1><%= @category.name %></h1>
-    </div>
-  </div>
-  <div class="line">
-    <div class="inner">
-      <% @category.blogs.each do |blog| %>
-      <div>
-        <h3>
-          <%= link_to blog.title, blog_path(id: blog.id) %>
-        </h3>
-        <p>
-          <%= truncate blog.body, length: 160 %>
-        </p>
+<div class="line">
+  <div class="vertical-inner">
+    <div class="container">
+      <div class="line">
+        <div class="inner">
+          <h1><%= @category.name %></h1>
+        </div>
       </div>
-      <% end %>
+      <div class="line">
+        <div class="inner">
+          <% @category.blogs.each do |blog| %>
+          <div>
+            <h3>
+              <%= link_to blog.title, blog_path(id: blog.id) %>
+            </h3>
+            <p>
+              <%= truncate blog.body, length: 160 %>
+            </p>
+          </div>
+          <% end %>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 <div class="line">
   <div class="vertical-inner">
-    <%= render "shared/home_button", name: "Home", klass: "back", path: root_path %>
+    <%= render "shared/home_button", name: "All Blogs", klass: "back", path: root_path %>
   </div>
 </div>

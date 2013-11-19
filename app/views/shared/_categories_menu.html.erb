@@ -1,13 +1,11 @@
 <div class="line main unit">
   <div class="size1of2">
-    <% @categories.each do |category| %>
+    <% Category.all.each do |category| %>
     <div class="unit size1of4">
       <div class="inner category">
-        <%= link_to category.name, categories_path(category) %>
+        <%= link_to category.name, categories_path(id: category.id) %>
       </div>
     </div>
     <% end %>
   </div>
 </div>
-
-

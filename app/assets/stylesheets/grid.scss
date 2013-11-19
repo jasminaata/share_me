@@ -1,6 +1,9 @@
-.unit { float: left; }
-.line { width: 100%; }
+.line { 
+  width: 100%; 
+  overflow:hidden;
+}
 
+.unit { float: left; }
 .size1of2 { width: 50%; }
 .size1of4 { width: 25%; }
 .size1of5 { width: 20%; }

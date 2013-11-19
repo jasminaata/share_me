@@ -1,9 +1,9 @@
 ShareMe::Application.routes.draw do
 
-  root 'categories#index'
+  root 'blogs#show'
   resource :blogs
   get 'blogs/:id' => 'blogs#index', as: :blog
-  resource :categories, only: [:show, :index]
+  resource :categories, only: [:show]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
