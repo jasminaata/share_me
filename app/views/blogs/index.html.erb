@@ -38,6 +38,8 @@
 <div class="line">
   <div class="vertical-inner">
     <%= render "shared/home_button", name: "All Blogs", path: root_path, klass: "back unit space" %>
-    <%= link_to "Back", categories_path(id: @category.id), class: "back" %>
+    <div class="top-back-inner">
+      <%= link_to "Back", categories_path(id: @category.id), class: "back link" %>
+    </div>
   </div>
 </div>
