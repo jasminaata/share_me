@@ -1,7 +1,22 @@
-<h3>All blogs</h3>
-<% @blogs.each do |blog| %>
-  <div><%= blog.title%></div>
-  <div><%= blog.body %></div></br>
-<% end %>
+<div class="line">
+  <div class="vertical-inner">
+    <div class="container">
+      <div class="line">
+        <div class="inner">
+          <h3>All blogs</h3><br/>
+          <% @blogs.each do |blog| %>
+            <div class="bolded">
+              <%= link_to blog.title, blog_path(id: blog.id) %>
+            </div>
+            <div><%= blog.body %></div></br>
+            <hr/>
+          <% end %>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+
 
 <%= link_to "Add new blog", new_blogs_path %>
