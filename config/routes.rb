@@ -1,5 +1,6 @@
 ShareMe::Application.routes.draw do
 
+  devise_for :users
   root 'blogs#show'
   resource :blogs
   get 'blogs/:id' => 'blogs#index', as: :blog
