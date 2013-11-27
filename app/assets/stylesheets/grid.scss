@@ -4,10 +4,12 @@
 }
 
 .unit { float: left; }
+.unit-right { float: right; }
 .size1of2 { width: 50%; }
 .size1of4 { width: 25%; }
 .size1of5 { width: 20%; }
 .size1of6 { width: 15%; }
+.size1of10 { width: 10%; }
 
 .inner { 
   padding: 10px; 
@@ -17,4 +19,5 @@
 .vertical-inner { 
   padding: 10px 0; 
 }
+
 

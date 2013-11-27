@@ -1,18 +1,20 @@
 <div class="line">
   <div class="vertical-inner">
-    <div class="container">
-      <div class="line">
-        <div class="inner">
-          <% @category.blogs.each do |blog| %>
-          <div>
-            <h3>
-              <%= link_to blog.title, blog_path(id: blog.id) %>
-            </h3>
-            <p>
-              <%= truncate blog.body, length: 160 %>
-            </p>
+    <div class="size1of2">
+      <div class="container">
+        <div class="line">
+          <div class="inner">
+            <% @category.blogs.each do |blog| %>
+            <div>
+              <h3>
+                <%= link_to blog.title, blog_path(id: blog.id) %>
+              </h3>
+              <p>
+                <%= truncate blog.body, length: 160 %>
+              </p>
+            </div>
+            <% end %>
           </div>
-          <% end %>
         </div>
       </div>
     </div>

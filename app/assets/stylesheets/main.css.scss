@@ -21,14 +21,17 @@ a {
     background-color: #A65600;
     border: 1px solid #1240AB;
     border-radius: 5px;
+    color: white;
 
     a {
       color: white;
-      text-transform: uppercase;
     }
 
     .category {
       border-right: 1px solid white;
+      a {
+        text-transform: uppercase;
+      }
     }
 
     .selected {
