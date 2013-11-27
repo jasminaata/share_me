@@ -1,22 +1,30 @@
 <div class="line">
   <div class="vertical-inner">
-    <div class="container">
-      <div class="line">
-        <div class="inner">
-          <h3>All blogs</h3><br/>
-          <% @blogs.each do |blog| %>
-            <div class="bolded">
-              <%= link_to blog.title, blog_path(id: blog.id) %>
+    <div class="size1of2 unit">
+      <div class="container">
+        <div class="line">
+          <div class="inner">
+            <h3>All blogs</h3><br/>
+            <% @blogs.each do |blog| %>
+              <div class="bolded">
+                <%= link_to blog.title, blog_path(id: blog.id) %>
+              </div>
+              <div><%= blog.body %></div></br>
+              <hr/>
+            <% end %>
             </div>
-            <div><%= blog.body %></div></br>
-            <hr/>
-          <% end %>
           </div>
         </div>
+    </div>
+    <div class="size1of2 unit">
+      <div class="inner">
+        <%= link_to "Login", new_user_session_path %>
       </div>
+    </div>
   </div>
 </div>
-
-
-
-<%= link_to "Add new blog", new_blogs_path %>
+<div class="line">
+  <div class="vertical-inner">
+    <%= link_to "Add new blog", new_blogs_path %>
+  </div>
+</div>
