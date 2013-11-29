@@ -28,7 +28,15 @@ class BlogsController < ApplicationController
   end
 
   def update
-    redirect_to action: 'index', notice: "Blog was updated!"
+    blog = Blog.find(params[:id])
+
+    respond_to do |format|
+      if blog.update_attributes( blog_params )
+        format.html { redirect_to blog, notice: "Blog was successfully updated." }
+      else
+        redirect_to action: 'edit'
+      end
+    end
   end
 
   private 
