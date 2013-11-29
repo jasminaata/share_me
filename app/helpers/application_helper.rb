@@ -1,12 +1,16 @@
 module ApplicationHelper
 
-  def is_selected?(category_id, params)
+  def is_selected?(category, params)
     if params[:controller] == "categories"
-      path = categories_path(id: category_id)
+      path = category_path(category)
       "selected" if current_page?(path)
-    elsif params[:controller] == "blogs" && params[:action] == "index"
+    elsif params[:controller] == "blogs" && params[:action] == "show"
       blog = Blog.find(params[:id])
-      "selected" if category_id == blog.category.id
+      "selected" if category.id == blog.category.id
     end
+  end
+
+  def user_is_admin?
+    current_user && current_user.admin?
   end
 end

@@ -1,10 +1,9 @@
 ShareMe::Application.routes.draw do
 
   devise_for :users
-  root 'blogs#show'
-  resource :blogs
-  get 'blogs/:id' => 'blogs#index', as: :blog
-  resource :categories, only: [:show]
+  root 'blogs#index'
+  resources :blogs
+  resources :categories, only: [:show]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

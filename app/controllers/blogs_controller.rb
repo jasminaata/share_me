@@ -1,12 +1,13 @@
 class BlogsController < ApplicationController
 
   def index
-    @blog = Blog.find(params[:id])
-    @category = @blog.category
+    @blogs = Blog.all
+    
   end
 
   def show 
-    @blogs = Blog.all
+    @blog = Blog.find(params[:id])
+    @category = @blog.category
   end
 
   def new
@@ -16,10 +17,18 @@ class BlogsController < ApplicationController
   def create
       blog = Blog.new blog_params
     if blog.save
-      redirect_to action: 'show', notice: "You created a blog!"
+      redirect_to action: 'index', notice: "You created a blog!"
     else
       redirect_to :back, notice: 'There was an error creating the blog!'
     end
+  end
+
+  def edit
+    @blog = Blog.find(params[:id])  
+  end
+
+  def update
+    redirect_to action: 'index', notice: "Blog was updated!"
   end
 
   private 

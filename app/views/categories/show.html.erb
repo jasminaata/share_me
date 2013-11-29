@@ -7,7 +7,7 @@
             <% @category.blogs.each do |blog| %>
             <div>
               <h3>
-                <%= link_to blog.title, blog_path(id: blog.id) %>
+                <%= link_to blog.title, blog_path(blog) %>
               </h3>
               <p>
                 <%= truncate blog.body, length: 160 %>
