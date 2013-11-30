@@ -10,7 +10,11 @@
                 <%= link_to blog.title, blog_path(blog) %>
               </div>
               <div class="bottom-inner"><%= blog.body %></div>
-              <%= link_to "Edit", edit_blog_path(blog) %>
+              <div class="vertical-inner">
+                <%= link_to "Edit", edit_blog_path(blog), class: "back link" if user_is_admin? %>
+                <%= link_to "Delete", blog_path(blog), method: :delete, class: "back link",
+                  confirm: "Are you sure you want to delete this blog?" if user_is_admin? %>
+              </div>
               <hr/>
             <% end %>
             </div>
@@ -21,6 +25,6 @@
 </div>
 <div class="line">
   <div class="vertical-inner">
-    <%= link_to "Add new blog", new_blog_path if user_is_admin? %>
+    <%= link_to "Add new blog", new_blog_path, class: "back link" if user_is_admin? %>
   </div>
 </div>

@@ -39,6 +39,13 @@ class BlogsController < ApplicationController
     end
   end
 
+  def destroy
+    @blog = Blog.find(params[:id])
+    @blog.destroy
+
+    redirect_to action: "index", notice: "Blog was successfully deleted."
+  end
+
   private 
 
   def blog_params
