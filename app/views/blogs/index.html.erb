@@ -10,6 +10,18 @@
                 <%= link_to blog.title, blog_path(blog) %>
               </div>
               <div class="bottom-inner"><%= blog.body %></div>
+
+              <h3>Comments:</h3>
+              <% blog.comments.each do |comment| %>
+              <div class="line">
+                <div class="inner">
+                  <%= comment.body %> - <span class="time-created">
+                    <%= time_ago_in_words(comment.created_at).gsub("about", "") + " ago" %>
+                  </span>
+                </div>
+              </div>
+              <% end %>
+
               <div class="vertical-inner">
                 <%= link_to "Edit", edit_blog_path(blog), class: "back link" if user_is_admin? %>
                 <%= link_to "Delete", blog_path(blog), method: :delete, class: "back link",
