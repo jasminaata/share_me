@@ -1,28 +1,80 @@
-.lightbox {
-  background: #FFE27F;
-  border: 1px solid #D4B240;
-  height: auto;
-  min-height: 300px;
-  width: 290px;
-  border-radius: 50px;
+@import url(http://fonts.googleapis.com/css?family=Bree+Serif);
 
-  .lbContent {
-    background: #fff;
-    border: 1px solid #EFCA4A;
-    border-radius: 30px;
-    height: auto;
-    min-height: 260px;
+.login-form {
+  width: 300px;
+  margin: 0 auto;
+  background: #f3f3f3;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.5);
 
-    .login-button {
-      padding: 5px 10px 5px 7px;
-      border: 1px solid #dedede;
-      border-radius: 10px;
-      background-color: #F9F9F9;
-      width: 65px;
+  .header {
+    padding: 40px 30px 30px 30px;
+  }
+
+  .content {
+    padding: 0 30px 25px 30px;
+
+    .email-box { padding-bottom: 25px; }
+
+    a {
+      font-family: 'Bree Serif', serif;
+      font-size: 14px;
+      &:hover { color: #3f9db8; }
     }
 
-    .sign-in-links {
-      a { color: blue; }
+    input {
+      width: 188px;
+      padding: 15px 25px;
+      font-size: 14px;
+      font-weight: 400;
+      color: #9d9e9e;
+      text-shadow: 1px 1px 0 rgba(255,255,255,1.0);
+      border-radius: 5px;
+      border: 1px solid #fff;
+      box-shadow: inset 0 1px 3px rgba(0,0,0,0.50);
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+      &:hover {
+        background: #dfe9ec;
+        color: #414848;
+      }  
+    }
+  }
+
+  .footer {
+    padding: 25px 30px 40px 30px;
+    background: #d4dedf;
+    border-top: 1px solid #fff;
+    box-shadow: inset 0 1px 0 rgba(0,0,0,0.15);
+
+    .register {
+      a {
+        color: #414848;
+        text-shadow: 0px 1px 0 rgba(255,255,255,0.5);
+        &:hover { color: #3f9db8; }
+      }
+
+      .login-button {
+        background: #56c2e1;
+        border: 1px solid #46b3d3;
+        border-radius: 5px;
+        box-shadow: inset 0 0 2px rgba(255,255,255,0.75);
+        padding: 11px 25px;
+        color: #fff;
+        text-shadow: 0px 1px 0 rgba(0,0,0,0.25);
+        &:hover {
+          background: #3f9db8;
+          border: 1px solid rgba(255,255,255,0.75);
+          box-shadow: inset 0 1px 3px rgba(0,0,0,0.5); 
+        };
+      }
+
+      a, .login-button {
+        font-family: 'Bree Serif', serif;
+        font-weight: 300;
+        font-size: 18px;
+      }
     }
   }
 }
