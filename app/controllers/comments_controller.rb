@@ -8,6 +8,7 @@ class CommentsController < ApplicationController
 
   def create
     @comment = Comment.new comment_params
+    @comment.user_id = current_user.id
     @comment.blog_id = @blog.id
 
     respond_to do |format|
@@ -20,6 +21,10 @@ class CommentsController < ApplicationController
   end
 
   def destroy
+    @comment = Comment.find(params[:id])
+    @comment.destroy
+
+    redirect_to :back, notice: "Comment was successfully deleted."
   end
 
   private 

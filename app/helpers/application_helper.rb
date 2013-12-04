@@ -13,4 +13,8 @@ module ApplicationHelper
   def user_is_admin?
     current_user && current_user.admin?
   end
+
+  def user_is_author?(comment)
+    user_signed_in? && current_user.id == comment.user_id
+  end
 end
