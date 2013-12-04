@@ -1,0 +1,48 @@
+<div class="line">
+  <div class="top-inner">
+    <div class="lightbox">
+      <div class="line">
+        <div class="double-inner">
+          <div class="lbContent">
+            <div class="line">
+              <div class="double-inner">
+                <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+                  <div class="line">
+                    <%= f.label :email %>
+                  </div>
+                  <div class="line">
+                    <div class="bottom-inner">
+                      <%= f.email_field :email, :autofocus => true %>
+                    </div>
+                  </div>
+                  <div class="line">
+                    <%= f.label :password %>
+                  </div>
+
+                  <div class="line">
+                    <div class="bottom-inner">
+                      <%= f.password_field :password %>
+                    </div>
+                  </div>
+
+                  <% if devise_mapping.rememberable? -%>
+                    <div class="bottom-inner">
+                      <%= f.check_box :remember_me %> <%= f.label :remember_me %>
+                    </div>
+                  <% end -%>
+
+                  <div class="bottom-inner">
+                    <%= f.submit "Login", :class => "login-button" %>
+                  </div>
+                <% end %>
+                <div class="sign-in-links">
+                  <%= render "devise/shared/links" %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
