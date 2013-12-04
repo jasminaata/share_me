@@ -2,7 +2,10 @@ ShareMe::Application.routes.draw do
 
   devise_for :users
   root 'blogs#index'
-  resources :blogs
+  resources :blogs do
+    resources :comments, only: [:create, :destroy]
+  end
+  
   resources :categories, only: [:show]
 
   # The priority is based upon order of creation: first created -> highest priority.

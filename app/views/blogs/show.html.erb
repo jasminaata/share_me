@@ -9,33 +9,51 @@
                 <%= @blog.title %>
               </h3>
               <p><%= @blog.body %></p>
-            </div>
+              <h3>Comments:</h3>
+              <% @blog.comments.each do |comment| %>
+                <div class="line">
+                  <div class="inner">
+                    <%= comment.body %> - <span class="time-created">
+                    <%= time_ago_in_words(comment.created_at).gsub("about", "") + " ago" %>
+                    </span>
+                  </div>
+                </div>
+              <% end %>
+
+              <% if user_signed_in? %>
+                <h2>Add a comment:</h2>
+                <%= form_for(Comment.new, url: blog_comments_path(@blog)) do |f| %>
+                <%= f.text_area :body %>
+                <%= f.submit 'Comment' %>
+                <% end %>
+              <% end %>
           </div>
         </div>
-        <div class="line">
-          <div class="inner">
-            <div class="size1of6 unit">
-              <div id="fb-root"></div>
-              <div class="fb-share-button" data-href="http://developers.facebook.com/docs/plugins/" data-type="button_count"></div>
-            </div>
-            <div class="size1of6 unit">
-              <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
-            </div>
-            <div class="size1of6 unit">
-              <%= render "linked_in_button" %>
-            </div>
-            <div class="size1of6 unit">
-              <div class="g-plusone" data-size="tall" data-annotation="none"></div>
-              <%= render "google_plus_button" %>
-            </div>
-            <div class="size1of6 unit">
-              <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
-            </div>
+      </div>
+      <div class="line">
+        <div class="inner">
+          <div class="size1of6 unit">
+            <div id="fb-root"></div>
+            <div class="fb-share-button" data-href="http://developers.facebook.com/docs/plugins/" data-type="button_count"></div>
+          </div>
+          <div class="size1of6 unit">
+            <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+          </div>
+          <div class="size1of6 unit">
+            <%= render "linked_in_button" %>
+          </div>
+          <div class="size1of6 unit">
+            <div class="g-plusone" data-size="tall" data-annotation="none"></div>
+            <%= render "google_plus_button" %>
+          </div>
+          <div class="size1of6 unit">
+            <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
 </div>
 <div class="line">
   <div class="vertical-inner">

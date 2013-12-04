@@ -15,7 +15,7 @@ class BlogsController < ApplicationController
   end
 
   def create
-      blog = Blog.new blog_params
+    blog = Blog.new blog_params
     if blog.save
       redirect_to action: 'index', notice: "You created a blog!"
     else
