@@ -6,7 +6,7 @@
           <div class="inner">
             <h3 class="bottom-inner">All blogs</h3>
             <% @blogs.each do |blog| %>
-              <div class="bolded">
+              <div class="title bolded">
                 <%= link_to blog.title, blog_path(blog) %>
               </div>
               <div class="bottom-inner"><%= blog.body %></div>
