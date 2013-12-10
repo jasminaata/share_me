@@ -7,6 +7,7 @@
             <div>
               <h3><%= @blog.title %></h3>
               <p><%= @blog.body %></p>
+              <div><%= image_tag @blog.image_url(:thumb).to_s %></div>
               <%= render "comments_form" %>
             </div>
           </div>

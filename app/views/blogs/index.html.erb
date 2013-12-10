@@ -10,6 +10,7 @@
                 <%= link_to blog.title, blog_path(blog) %>
               </div>
               <div class="bottom-inner"><%= blog.body %></div>
+              <div><%= image_tag blog.image_url(:thumb).to_s %></div>
 
               <div class="vertical-inner">
                 <%= link_to "Edit", edit_blog_path(blog), class: "back link" if user_is_admin? %>
