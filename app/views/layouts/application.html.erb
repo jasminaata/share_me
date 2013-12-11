@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>ShareMe</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "facebook_button", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "twitter_button", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-  <div class="main-container">
-    <%= render "shared/categories_menu" %>
-    <%= yield %>
-  </div>
-</body>
+  <head>
+    <title>ShareMe</title>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "facebook_button", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "twitter_button", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <div class="main-container">
+      <%= render "shared/categories_menu" %>
+      <%= yield %>
+    </div>
+  </body>
 </html>

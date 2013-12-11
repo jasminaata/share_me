@@ -5,6 +5,7 @@
 
 .unit { float: left; }
 .unit-right { float: right; }
+.size3of4 { width: 75%; }
 .size1of2 { width: 50%; }
 .size2of5 { width: 37%; }
 .size1of4 { width: 25%; }
@@ -24,6 +25,10 @@
 
 .vertical-inner { 
   padding: 10px 0; 
+}
+
+.horizontal-inner { 
+  padding: 0 10px; 
 }
 
 .bottom-inner { 

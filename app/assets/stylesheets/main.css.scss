@@ -88,5 +88,20 @@ a {
   .bolded {
     font-weight: bold;
   }
+
+  .about-me {
+    .description {
+      color: #616566;
+    }
+
+    img {
+      height: 200px;
+      width: 200px;
+    }
+
+    hr {
+      border: 1px solid grey;
+    }
+  }
 }
 
