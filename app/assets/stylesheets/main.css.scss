@@ -134,6 +134,15 @@ a {
     width: auto;
   }
 
+  .login-form {
+    width: auto;
+    .content {
+      input, textarea {
+        width: auto;
+      }
+    }
+  }
+
   .category {
     font-size: 13px;
   }
@@ -141,6 +150,6 @@ a {
   .border-bottom {
     border: 1px solid #1240AB;
   }
- }
+}
 }
 

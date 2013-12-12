@@ -1,27 +1,43 @@
-<%= form_for @blog, html: { multipart: true } do |f| %>
-  <div>
-    <%= f.label :title, 'Title' %><br/>
-    <%= f.text_field :title %>
-  </div><br/>
-  <div>
-    <%= f.label :body %></br/>
-    <%= f.text_area :body %>
-  </div><br/>
-  <div>
-    <%= f.label :category %></br>
-    <%= f.select :category_id, Category.all.collect { |cat| [cat.name, cat.id] }, :include_blank => true  %>
+<div class="inner">
+  <div class="vertical-inner">
+    <%= link_to "Back", root_path, class: "back link" %>
   </div>
-  <div>
-    <%= f.file_field :image %>
+  <div class="login-form">
+    <%= form_for @blog, html: { multipart: true } do |f| %>
+
+    <div class="header">
+      <h1><%= text %></h1>
+    </div>
+
+    <div class="content">
+      <div class="vertical-inner">
+        <%= f.label :title, 'Title' %><br/>
+        <%= f.text_field :title %>
+      </div>
+      <%= f.label :body %></br/>
+      <%= f.text_area :body %>
+      <div class="vertical-inner">
+        <%= f.label :category %></br>
+        <%= f.select :category_id, Category.all.collect { |cat| [cat.name, cat.id] }, :include_blank => true  %>
+      </div>
+      <div class="vertical-inner">
+        <%= f.file_field :image %>
+      </div>
+      <div>
+        <%= f.label :remote_image_url, "or image URL" %><br/>
+        <%= f.text_field :remote_image_url %>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="register">
+        <div class="line">
+          <div class="unit">
+            <%= f.submit :class => "login-button" %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% end %>
   </div>
-  <div>
-    <%= f.label :remote_image_url, "or image URL" %><br/>
-    <%= f.text_field :remote_image_url %>
-  </div>
-  <div>
-    <%= f.submit %>
-  </div>
-<% end %>
-<div class="vertical-inner">
-  <%= link_to "Back", root_path, class: "back link" %>
 </div>
+

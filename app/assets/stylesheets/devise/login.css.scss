@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Bree+Serif);
 
 .login-form {
-  width: 300px;
+  width: 385px;
   margin: 0 auto;
   background: #f3f3f3;
   border: 1px solid #fff;
@@ -23,8 +23,12 @@
       &:hover { color: #3f9db8; }
     }
 
-    input {
-      width: 188px;
+    textarea {
+      min-height: 100px;
+    }
+
+    input, textarea {
+      width: 230px;
       padding: 15px 25px;
       font-size: 14px;
       font-weight: 400;
