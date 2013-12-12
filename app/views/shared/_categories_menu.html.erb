@@ -1,5 +1,5 @@
 <div class="line main unit">
-  <div class="size1of2 unit">
+  <div class="size1of2 unit s-size1of1 border-bottom">
     <% Category.all.each do |category| %>
       <div class="size1of4 unit">
         <div class="inner category <%= is_selected?(category, params) %>">
@@ -8,13 +8,13 @@
       </div>
     <% end %>
   </div>
-  <div class="size1of2 unit">
+  <div class="size1of2 unit s-size1of1">
     <div class="inner">
       <% if user_signed_in? %>
         <div class="size1of10 unit-right">
           <%= link_to "Logout", destroy_user_session_path, method: :delete %>
         </div>
-        <div class="size2of5 unit-right">
+        <div class="size2of5 l-unit-right s-unit">
           <%= current_user.email %>
         </div>
         <% else %>

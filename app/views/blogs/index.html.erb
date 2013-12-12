@@ -22,13 +22,13 @@
           </div>
         </div>
       </div>
+      <div class="line">
+        <div class="vertical-inner">
+          <%= link_to "Add new blog", new_blog_path, class: "back link" if user_is_admin? %>
+        </div>
+      </div>
     </div>
     <%= render "shared/about_me"%>
   </div>
 </div>
 
-<div class="line">
-  <div class="vertical-inner">
-    <%= link_to "Add new blog", new_blog_path, class: "back link" if user_is_admin? %>
-  </div>
-</div>

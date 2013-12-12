@@ -127,3 +127,20 @@ a {
   }
 }
 
+@media all and (max-width: 600px) {
+ body {
+  font-size: 14px;
+  .main-container {
+    width: auto;
+  }
+
+  .category {
+    font-size: 13px;
+  }
+
+  .border-bottom {
+    border: 1px solid #1240AB;
+  }
+ }
+}
+
