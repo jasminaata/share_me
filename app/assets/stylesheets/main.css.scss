@@ -102,6 +102,28 @@ a {
     hr {
       border: 1px solid grey;
     }
+
+    .social-icon {
+      padding-top: 15px;
+      padding-right: 5px;
+      a {
+        padding: 15px;
+        &.twitter {
+          background: url('/images/twitter-round.png') left top no-repeat;
+          background-size: 25px;
+        }
+
+        &.facebook {
+          background: url('/images/facebook-round.png') left top no-repeat;
+          background-size: 25px;
+        }
+
+        &.github {
+          background: url('/images/github.png') left top no-repeat;
+          background-size: 25px;
+        }
+      }
+    }
   }
 }
 
