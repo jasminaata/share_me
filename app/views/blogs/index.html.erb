@@ -15,7 +15,7 @@
               <div class="vertical-inner">
                 <%= link_to "Edit", edit_blog_path(blog), class: "back link" if user_is_admin? %>
                 <%= link_to "Delete", blog_path(blog), method: :delete, class: "back link",
-                confirm: "Are you sure you want to delete this blog?" if user_is_admin? %>
+                data: { confirm: 'Are you sure you want to delete this blog?' } if user_is_admin? %>
               </div>
               <hr/>
             <% end %>
