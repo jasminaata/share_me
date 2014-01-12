@@ -9,9 +9,9 @@
               <h3 class="title">
                 <%= link_to blog.title, blog_path(blog) %>
               </h3>
-              <p>
-                <%= truncate blog.body, length: 460 %>
-              </p>
+              <div class="content">
+                <%= markdown blog.body %>
+              </div>
             </div>
             <% end %>
           </div>

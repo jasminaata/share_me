@@ -58,6 +58,13 @@ a {
         color: #3f9db8;
       }
     }
+
+    .content {
+      img {
+        max-width: 300px;
+        max-height: 300px;
+      }
+    }
   }
 
   .top-back-inner {

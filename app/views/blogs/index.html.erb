@@ -9,7 +9,7 @@
               <div class="title bolded">
                 <%= link_to blog.title, blog_path(blog) %>
               </div>
-              <div class="bottom-inner"><%= blog.body %></div>
+              <div class="bottom-inner content"><%= markdown blog.body %></div>
               <div><%= image_tag blog.image_url(:thumb).to_s %></div>
 
               <div class="vertical-inner">
