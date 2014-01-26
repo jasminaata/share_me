@@ -11,12 +11,6 @@
               </div>
               <div class="bottom-inner content"><%= markdown blog.body %></div>
               <div><%= image_tag blog.image_url(:thumb).to_s %></div>
-
-              <div class="vertical-inner">
-                <%= link_to "Edit", edit_blog_path(blog), class: "back link" if user_is_admin? %>
-                <%= link_to "Delete", blog_path(blog), method: :delete, class: "back link",
-                data: { confirm: 'Are you sure you want to delete this blog?' } if user_is_admin? %>
-              </div>
               <hr/>
             <% end %>
           </div>
