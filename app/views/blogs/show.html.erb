@@ -16,7 +16,7 @@
           <div class="inner">
             <div class="size1of5 unit">
               <div id="fb-root"></div>
-              <div class="fb-share-button" data-href="http://developers.facebook.com/docs/plugins/" data-type="button_count"></div>
+              <div class="fb-share-button" data-href="<%= request.original_url %>" data-type="button_count"></div>
             </div>
             <div class="size1of5 unit">
               <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
@@ -29,7 +29,7 @@
               <%= render "google_plus_button" %>
             </div>
             <div class="size1of5 unit">
-              <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
+              <div class="fb-like" data-href="<%= request.original_url %>" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
             </div>
           </div>
         </div>
