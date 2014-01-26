@@ -6,12 +6,12 @@
           <div class="inner">
             <h3 class="bottom-inner">All blogs</h3>
             <% @blogs.each do |blog| %>
-              <div class="title bolded">
-                <%= link_to blog.title, blog_path(blog) %>
-              </div>
-              <div class="bottom-inner content"><%= markdown blog.body %></div>
-              <div><%= image_tag blog.image_url(:thumb).to_s %></div>
-              <hr/>
+            <div class="title bolded">
+              <%= link_to blog.title, blog_path(blog) %>
+            </div>
+            <div class="bottom-inner content"><%= markdown blog.body %></div>
+            <div><%= image_tag blog.image_url(:thumb).to_s %></div>
+            <hr/>
             <% end %>
           </div>
         </div>
@@ -23,6 +23,22 @@
       </div>
     </div>
     <%= render "shared/about_me"%>
+    <div class="size1of4 unit">
+      <div class="line">
+        <div class="horizontal-inner">
+          <div class="blog-list">
+            <div class="inner">
+              <h3 class="bottom-inner">All posts</h3>
+              <% @blogs.each do |blog| %>
+              <div class="line">
+                <%= link_to blog.title, blog_path(blog) %>
+              </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
