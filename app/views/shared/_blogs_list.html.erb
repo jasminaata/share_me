@@ -1,0 +1,16 @@
+<div class="size1of4 unit">
+  <div class="line">
+    <div class="left-inner">
+      <div class="blog-list">
+        <div class="inner">
+          <h3 class="bottom-inner">Other blogs in <%= @category.name %>:</h3>
+          <% @category.blogs.each do |blog| %>
+          <div class="line">
+            <%= link_to blog.title, blog_path(blog) %>
+          </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
