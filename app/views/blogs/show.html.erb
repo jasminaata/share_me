@@ -1,43 +1,11 @@
 <div class="line">
   <div class="vertical-inner">
     <div class="size3of4 unit">
-      <div class="container">
-        <div class="line">
-          <div class="inner">
-            <div>
-              <h3><%= @blog.title %></h3>
-              <div class="content"><%= markdown @blog.body %></div>
-              <div><%= image_tag @blog.image_url(:thumb).to_s %></div>
-              <%= render "comments_form" %>
-            </div>
-          </div>
-        </div>
-        <div class="line">
-          <div class="inner">
-            <div class="size1of5 unit">
-              <div id="fb-root"></div>
-              <div class="fb-share-button" data-href="<%= request.original_url %>" data-type="button_count"></div>
-            </div>
-            <div class="size1of5 unit">
-              <a href="<%= request.original_url %>" class="twitter-share-button">Tweet</a>
-            </div>
-            <div class="size1of5 unit">
-              <%= render "linked_in_button" %>
-            </div>
-            <div class="size1of5 unit">
-              <div class="g-plusone" data-size="tall" data-annotation="none"></div>
-              <%= render "google_plus_button" %>
-            </div>
-            <div class="size1of5 unit">
-              <div class="fb-like" data-href="<%= request.original_url %>" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <%= render "shared/single_blog" %>  
       
       <div class="line">
         <div class="vertical-inner">
-          <%= render "shared/home_button", name: "All Blogs", path: root_path, klass: "back unit space" %>
+          <%= render "shared/home_button", name: "Home", path: root_path, klass: "back unit space" %>
           <div class="top-back-inner">
             <%= link_to "Edit", edit_blog_path(@blog), class: "back link" if user_is_admin? %>
             <%= link_to "Delete", blog_path(@blog), method: :delete, class: "back link",

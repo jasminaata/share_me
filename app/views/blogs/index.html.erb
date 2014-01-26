@@ -1,27 +1,15 @@
 <div class="line">
   <div class="vertical-inner">
     <div class="size3of4 unit">
-      <div class="container">
-        <div class="line">
-          <div class="inner">
-            <h3 class="bottom-inner">All blogs</h3>
-            <% @blogs.each do |blog| %>
-            <div class="title bolded">
-              <%= link_to blog.title, blog_path(blog) %>
-            </div>
-            <div class="bottom-inner content"><%= markdown blog.body %></div>
-            <div><%= image_tag blog.image_url(:thumb).to_s %></div>
-            <hr/>
-            <% end %>
-          </div>
-        </div>
-      </div>
+      <%= render "shared/single_blog", :@blog => @blogs.last %>
+      
       <div class="line">
         <div class="vertical-inner">
           <%= link_to "Add new blog", new_blog_path, class: "back link" if user_is_admin? %>
         </div>
       </div>
     </div>
+
     <%= render "shared/about_me"%>
     <div class="size1of4 unit">
       <div class="line">
