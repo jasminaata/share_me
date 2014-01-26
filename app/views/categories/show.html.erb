@@ -5,26 +5,27 @@
         <div class="line">
           <div class="inner">
             <% @category.blogs.each do |blog| %>
-            <div>
-              <h3 class="title">
-                <%= link_to blog.title, blog_path(blog) %>
-              </h3>
-              <div class="content">
-                <%= markdown blog.body %>
-              </div>
+            <h3 class="title">
+              <%= link_to blog.title, blog_path(blog) %>
+            </h3>
+            <div class="content">
+              <%= markdown blog.body %>
             </div>
+            <hr/>
             <% end %>
           </div>
         </div>
       </div>
+
       <div class="line">
         <div class="vertical-inner">
           <%= render "shared/home_button", name: "Home", klass: "back", path: root_path %>
         </div>
       </div>
     </div>
-    <%= render "shared/about_me"%>
-    <%= render "shared/blogs_list" %>
+
+    <%= render "shared/about_me" %>
+    <%= render "shared/blogs_list", :@blogs => @category.blogs, :title => "Blogs in #{ @category.name }" %>
   </div>
 </div>
 

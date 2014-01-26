@@ -2,7 +2,7 @@
   <div class="vertical-inner">
     <div class="size3of4 unit">
       <%= render "shared/single_blog", :@blog => @blogs.last %>
-      
+
       <div class="line">
         <div class="vertical-inner">
           <%= link_to "Add new blog", new_blog_path, class: "back link" if user_is_admin? %>
@@ -11,22 +11,7 @@
     </div>
 
     <%= render "shared/about_me"%>
-    <div class="size1of4 unit">
-      <div class="line">
-        <div class="horizontal-inner">
-          <div class="blog-list">
-            <div class="inner">
-              <h3 class="bottom-inner">All posts</h3>
-              <% @blogs.each do |blog| %>
-              <div class="line">
-                <%= link_to blog.title, blog_path(blog) %>
-              </div>
-              <% end %>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <%= render "shared/blogs_list", :title => "All posts" %>
   </div>
 </div>
 

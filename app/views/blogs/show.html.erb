@@ -15,8 +15,9 @@
         </div>
       </div>
     </div>
+    
     <%= render "shared/about_me"%>
-    <%= render "shared/blogs_list" %>
+    <%= render "shared/blogs_list", :@blogs => @category.blogs, :title => "Blogs in #{ @category.name }" %>
   </div>
 </div>
 

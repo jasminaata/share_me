@@ -3,8 +3,8 @@
     <div class="horizontal-inner">
       <div class="blog-list">
         <div class="inner">
-          <h3 class="bottom-inner">Blogs in <%= @category.name %></h3>
-          <% @category.blogs.each do |blog| %>
+          <h3 class="bottom-inner"><%= title %></h3>
+          <% @blogs.each do |blog| %>
           <div class="line">
             <%= link_to blog.title, blog_path(blog) %>
           </div>
