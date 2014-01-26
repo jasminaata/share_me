@@ -1,18 +1,41 @@
-<h2>Sign up</h2>
+<div class="inner">
+  <div class="login-form">
+    <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
+      <div class="header">
+        <h1>Sign Up Form</h1>
+      </div>
 
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+      <div class="content">
+        <div class="email-box">
+          <%= f.email_field :email, :autofocus => true, placeholder: :email %>
+        </div>
+        <div class="email-box">
+          <%= f.password_field :password, placeholder: :password %>
+        </div>
+        <%= f.password_field :password_confirmation, placeholder: :password_confirmation %>
+        <div class="line">
+          <div class="vertical-inner">
+            <%= link_to "Forgot your password?", new_password_path(resource_name) %>
+          </div>
+        </div>
+      </div>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true %></div>
-
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
-
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
-
-  <div><%= f.submit "Sign up" %></div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+      <div class="footer">
+        <div class="register">
+          <div class="line">
+            <div class="size1of2 unit">
+              <div class="inner">
+                <%= link_to "Sign in", new_session_path(resource_name) %>
+              </div>
+            </div>
+            <div class="size1of2 unit">
+              <%= f.submit "Sign Up", :class => "login-button" %>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    <% end %>
+  </div>
+</div>
