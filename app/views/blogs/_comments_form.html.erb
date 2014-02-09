@@ -21,4 +21,11 @@
     <%= f.text_area :body %><br/>
     <%= f.submit 'Comment' %>
   <% end %>
+
+<% else %>
+  <div class="line">
+    <div class="inner notice warning">
+      You must be logged in in order to post comments.
+    </div>
+  </div>
 <% end %>
